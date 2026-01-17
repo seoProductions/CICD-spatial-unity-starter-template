@@ -17,11 +17,11 @@ Local execution:
 
 Publish to spatial.io via Powershell
 
- & 'C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Unity.exe' -projectPath C:\Users\Seo\TestSpatialBuild\spatial-unity-starter-template\ -executeMethod SpatialSys.UnitySDK.Editor.BuildUtility.BuildAndPublishPackage -batchmode
+ & 'C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Unity.exe' -projectPath C:\Users\Seo\TestSpatialBuild\CICD-spatial-unity-starter-template\ -executeMethod SpatialSys.UnitySDK.Editor.BuildUtility.BuildAndPublishPackage -batchmode
 
 Spatial.io "Test Scene" via Powershell
 
-& 'C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Unity.exe' -projectPath C:\Users\Seo\TestSpatialBuild\spatial-unity-starter-template\ -executeMethod SpatialSys.UnitySDK.Editor.BuildUtility.BuildAndUploadForSandbox -accept-apiupdate -batchmode
+& 'C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Unity.exe' -projectPath C:\Users\Seo\TestSpatialBuild\CICD-spatial-unity-starter-template\ -executeMethod SpatialSys.UnitySDK.Editor.BuildUtility.BuildAndUploadForSandbox -accept-apiupdate -batchmode
 
 
 Note: 
