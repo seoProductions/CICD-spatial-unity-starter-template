@@ -4,6 +4,7 @@
     "com.unity.ide.visualstudio": "2.0.17",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.render-pipelines.universal": "12.1.10",
+    "io.spatial.unitysdk": "file:../io.spatial.unitysdk@1.69.0",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.6.4",
     "com.unity.ugui": "1.0.0",
@@ -30,15 +31,5 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  },
-  "scopedRegistries": [
-    {
-      "name": "package.openupm.com",
-      "url": "https://package.openupm.com",
-      "scopes": [
-        "com.openupm",
-        "io.spatial.unitysdk"
-      ]
-    }
-  ]
+  }
 }
