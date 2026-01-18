@@ -65,7 +65,7 @@ jobs:
     strategy:
       fail-fast: false
     runs-on: ubuntu-latest    # I will use game-ci docker image for this test
-    container: gameci/unity:2022.3.21f1-base-ubuntu  #try 2021.3.21f1
+    container: unityci/editor:2022.3.21f1-base  #try 2021.3.21f1
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
