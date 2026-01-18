@@ -31,14 +31,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
-      - name: Cache dependencies (Reduces Pipeline Time)
+      - name: Cache dependencies
         uses: actions/cache@v4
         with:
           path: ${{ matrix.projectPath }}/Library
           key: Library-${{ matrix.projectPath }}
           restore-keys: |
             Library-
-      - name: Set-Up Unity
+      - name: Test Unity
         uses: game-ci/unity-test-runner@v4
         id: tests    # Assign an ID to this runner. This way we can reference output' and results from this:
         env:
