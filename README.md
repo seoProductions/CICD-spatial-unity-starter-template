@@ -36,3 +36,5 @@ Local execution:
 Note: 
 The -nographics flag breaks the logging functionality.
 The -quit       flag quits instantly, impeding any spatial.io publishing/testing to process
+
+credit to https://www.anchorpoint.app/blog/setting-up-a-ci-cd-build-pipeline-for-unity-using-github-actions
