@@ -15,15 +15,26 @@ SDK changes:
 
 Local execution:
 
-Publish to spatial.io via Powershell
+### Publish to spatial.io via Powershell
 
- & 'C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Unity.exe' -projectPath C:\Users\Seo\TestSpatialBuild\spatial-unity-starter-template\ -executeMethod SpatialSys.UnitySDK.Editor.BuildUtility.BuildAndPublishPackage -batchmode
+``` powershell
+& 'C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Unity.exe' -projectPath C:\Users\Seo\TestSpatialBuild\CICD-spatial-unity-starter-template\ -executeMethod SpatialSys.UnitySDK.Editor.BuildUtility.BuildAndPublishPackage -batchmode
+```
 
-Spatial.io "Test Scene" via Powershell
+### Spatial.io "Test Scene" via Powershell (Unsucessfull so far)
 
-& 'C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Unity.exe' -projectPath C:\Users\Seo\TestSpatialBuild\spatial-unity-starter-template\ -executeMethod SpatialSys.UnitySDK.Editor.BuildUtility.BuildAndUploadForSandbox -accept-apiupdate -batchmode
+``` powershell
+& 'C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Unity.exe' -projectPath C:\Users\Seo\TestSpatialBuild\CICD-spatial-unity-starter-template\ -executeMethod SpatialSys.UnitySDK.Editor.BuildUtility.BuildAndUploadForSandbox -accept-apiupdate -batchmode
+```
 
+### Invoke a Test Function for Debug purposes
+ 
+ ``` powershell
+ & 'C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Unity.exe' -projectPath C:\Users\Seo\TestSpatialBuild\CICD-spatial-unity-starter-template\ -executeMethod  SpatialSys.UnitySDK.Editor.TestBuild.testFunction  -batchmode
+```
 
 Note: 
 The -nographics flag breaks the logging functionality.
 The -quit       flag quits instantly, impeding any spatial.io publishing/testing to process
+
+credit to https://www.anchorpoint.app/blog/setting-up-a-ci-cd-build-pipeline-for-unity-using-github-actions
