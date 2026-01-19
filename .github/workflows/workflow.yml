@@ -62,9 +62,9 @@ jobs:
   invokeTestFunction:
     needs: testProject
     name: Test comand line functions
-    runs-on: game-ci/unity-builder@v4
-    #uses: game-ci/unity-builder@v4
-    container: unityci/editor:2022.3.44f1-base
+    runs-on: ubuntu-latest  # Run unity inside ubuntu via docker
+    #runs-on: game-ci/unity-builder@v4
+    #container: unityci/editor:2022.3.44f1-base
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
