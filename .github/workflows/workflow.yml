@@ -64,7 +64,7 @@ jobs:
     name: Test comand line functions
     runs-on: game-ci/unity-builder@v4
     #uses: game-ci/unity-builder@v4
-    container: unityci/editor:2022.3.21f1-base
+    container: unityci/editor:2022.3.44f1-base
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -74,5 +74,7 @@ jobs:
       # The container image handles licensing automatically if secrets are present
       - name: Invoke Comand Line
         run: |
+          ls -l
+          pwd
           unity-editor -batchmode -projectPath . -executeMethod SpatialSys.UnitySDK.Editor.TestBuild.testFunction -logfile 
           
