@@ -10,7 +10,7 @@ namespace SpatialSys.UnitySDK.Editor
         // Start is called before the first frame update
         public static void testFunction()
         {
-            Debug.Log("Test function Called Sucessfully!");
+            Debg("Test function Called Sucessfully!");
             Console.WriteLine("Test function Called Sucessfully!");
         }
     }
