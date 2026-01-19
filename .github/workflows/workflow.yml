@@ -62,18 +62,20 @@ jobs:
   invokeTestFunction:
     needs: testProject
     name: Test comand line functions
-    strategy:
-      fail-fast: false
-    runs-on: ubuntu-latest    # I will use game-ci docker image for this test
-    container: gameci/unity:2022.3.14f1-base-ubuntu  #try 2021.3.21f1
+
+    runs-on: ubuntu-latest  # Run unity inside ubuntu via docker
+    
+    #runs-on: game-ci/unity-builder@v4
+    container: unityci/editor:2022.3.44f1-base
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           lfs: true
 
-      # The container image handles licensing automatically if secrets are present
-
       - name: Invoke Comand Line
         run: |
-          unity-editor -batchmode -projectPath . -executeMethod SpatialSys.UnitySDK.Editor.TestBuild.testFunction -logfile /dev/stdout
+          ls -l
+          pwd
+          unity-editor -batchmode -projectPath . -executeMethod SpatialSys.UnitySDK.Editor.TestBuild.testFunction -logfile 
+          
