@@ -62,29 +62,20 @@ jobs:
   invokeTestFunction:
     needs: testProject
     name: Test comand line functions
-    uses: akiojin/unity-command-github-action@v1
-    with:
-    #  lfs: true
-    #  build-target: iOS
-      project-directory: ${{ github.workspace }}
-      execute-method: UnityBuildScript.PerformBuild
-      additional-arguments: -v --param="-batchmode -projectPath . -executeMethod SpatialSys.UnitySDK.Editor.TestBuild.testFunction "
 
-    
-    #runs-on: ubuntu-latest  # Run unity inside ubuntu via docker
+    runs-on: ubuntu-latest  # Run unity inside ubuntu via docker
     
     #runs-on: game-ci/unity-builder@v4
-    #container: unityci/editor:2022.3.44f1-base
-    #steps:
-    #  - name: Checkout repository
-    #    uses: actions/checkout@v4
-    #    with:
-    #      lfs: true
+    container: unityci/editor:2022.3.44f1-base
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
 
-      # The container image handles licensing automatically if secrets are present
-    #  - name: Invoke Comand Line
-    #    run: |
-    #      ls -l
-    #      pwd
-    #      unity-editor -batchmode -projectPath . -executeMethod SpatialSys.UnitySDK.Editor.TestBuild.testFunction -logfile 
+      - name: Invoke Comand Line
+        run: |
+          ls -l
+          pwd
+          unity-editor -batchmode -projectPath . -executeMethod SpatialSys.UnitySDK.Editor.TestBuild.testFunction -logfile 
           
