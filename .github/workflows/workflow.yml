@@ -90,3 +90,4 @@ jobs:
         with:
           name: Unity Log File
           path: ./log.txt
+          compression-level: 0 
