@@ -82,7 +82,7 @@ jobs:
         run: |
           ls -l
           pwd
-          unity-editor -batchmode -username ${{ secrets.UNITY_EMAIL }} -password ${{ secrets.UNITY_PASSWORD }} -serial ${{ secrets.UNITY_SERIAL }} -projectPath . -executeMethod SpatialSys.UnitySDK.Editor.TestBuild.testFunction -logfile log.txt 
+          unity-editor -batchmode -username ${{ secrets.UNITY_EMAIL }} -password ${{ secrets.UNITY_PASSWORD }} -serial ${{ secrets.UNITY_SERIAL }} -projectPath . -quit -executeMethod SpatialSys.UnitySDK.Editor.TestBuild.testFunction -logfile log.txt 
           
       - name: Upload as Artifact         # Share results with other jobs!
         uses: actions/upload-artifact@v4
