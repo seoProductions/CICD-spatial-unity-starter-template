@@ -85,4 +85,4 @@ jobs:
         if: always()    # Always invoke
         with:
           name: Unity Log File
-          path: ${{ steps.function-test.outputs.artifactsPath }}/log.txt
+          path: ./log.txt
